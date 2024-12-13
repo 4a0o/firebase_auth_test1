@@ -53,7 +53,7 @@ export default {
   mounted () {
         const options = {
             client_id: '761033708851-3blmfcdfaom29tdno64107427kqe5mer.apps.googleusercontent.com', // required
-            auto_select: false, // optional
+            auto_select: true, // optional
             cancel_on_tap_outside: false, // optional
             context: 'signin', // optional
         };
