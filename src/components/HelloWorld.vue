@@ -26,17 +26,11 @@
       <button @click="handleSignInGitHub">login</button>
     </div>
   </div>
-
-  <div id="g_id_onload"
-     data-client_id="761033708851-3blmfcdfaom29tdno64107427kqe5mer.apps.googleusercontent.com"
-     data-callback="handleCredentialResponse">
-  </div>
-
 </template>
 
 <script>
 import firebaseConfig from '../firebaseConfig';
-import { getAuth, signInWithPopup, signOut, GoogleAuthProvider, TwitterAuthProvider,signInWithCredential } from "firebase/auth";
+import { getAuth, signInWithPopup, signOut, GoogleAuthProvider, TwitterAuthProvider } from "firebase/auth";
 import googleOneTap from 'google-one-tap';
 
 firebaseConfig
@@ -66,15 +60,14 @@ export default {
         googleOneTap(options, (response) => {
           console.log("response got:"+ response);
 
-          const credential = GoogleAuthProvider.credential(response.credential)
-          signInWithCredential(auth, credential).then(function (result) {
-            const user = result.user
-            console.log(user)
-          })
+//          const credential = GoogleAuthProvider.credential(response.credential)
+//          signInWithCredential(auth, credential).then(function (result) {
+//            const user = result.user
+//            console.log(user)
+//          })
         });
   },
   methods: {
-
     handleSignInGoogle() {
       signInWithPopup(auth, provider)
         .then((result) => {          
