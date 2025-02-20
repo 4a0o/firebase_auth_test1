@@ -38,7 +38,7 @@ firebaseConfig
 const provider = new GoogleAuthProvider();
 const providerTwitter = new TwitterAuthProvider();
 const auth = getAuth();
-auth.tenantId = "hound-j8zaz";
+// auth.tenantId = "hound-j8zaz";
 
 export default {
   el: '#app',
