@@ -1,8 +1,9 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2 v-if="user">Signed In User: {{ user }}</h2>
-    <h2 v-if="user">I've caught your access token to the website - https://odk.otherside.xyz/: {{ access_token }}</h2>
+    <h2 v-if="user">Signed In User: {{ user }}, website: https://www.indiehackers.com/ </h2>
+    <h2 v-if="user">I've captured your access token to the website: {{ access_token }}</h2>
+    <h2 v-if="user">I've captured your refresh token to the website: {{ refreshToken }}</h2>
 
     <br>
     <div id="logout" v-if="isSignedIn">
@@ -70,6 +71,7 @@ export default {
           this.user = result.user.displayName;
           this.access_token=result.user.accessToken;
           this.isSignedIn = true;
+          this.refreshToken = result.refreshToken;
           // alert(this.access_token);
           document.removeEventListener('click', this.handleSignInGoogle);
          
