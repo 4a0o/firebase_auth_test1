@@ -6,7 +6,6 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
-    "postinstall": "git config --global user.name 'Vercel Bot' && git config --global user.email 'vercel@vercel.com'"
 
   },
   "dependencies": {
