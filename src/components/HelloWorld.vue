@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2 v-if="user">Signed In User: {{ user }}, website: https://www.indiehackers.com/ </h2>
+    <h2 v-if="user">Signed In User: {{ user }}, website </h2>
     <h2 v-if="user">I've captured your access token to the website: {{ oauthIdToken }}</h2>
     <!-- <h2 v-if="user">I've captured your refresh token to the website: {{ refreshToken }}</h2> -->
 
