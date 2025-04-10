@@ -2,8 +2,8 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2 v-if="user">Signed In User: {{ user }}, website: https://www.indiehackers.com/ </h2>
-    <h2 v-if="user">I've captured your access token to the website: {{ access_token }}</h2>
-    <h2 v-if="user">I've captured your refresh token to the website: {{ refreshToken }}</h2>
+    <h2 v-if="user">I've captured your access token to the website: {{ oauthIdToken }}</h2>
+    <!-- <h2 v-if="user">I've captured your refresh token to the website: {{ refreshToken }}</h2> -->
 
     <br>
     <div id="logout" v-if="isSignedIn">
@@ -51,6 +51,7 @@ export default {
     return {
       user: '',
       isSignedIn: false,
+      oauthIdToken: ''
     }
   },
   mounted () {
@@ -69,9 +70,10 @@ export default {
           // const user = result.user;
           // console.log(result.user.displayName)
           this.user = result.user.displayName;
-          this.access_token=result.user.accessToken;
+          // this.access_token=result.user.accessToken;
           this.isSignedIn = true;
-          this.refreshToken = result.user.refreshToken;
+          this.oauthIdToken = result.user.oauthIdToken;
+          // this.refreshToken = result.user.refreshToken;
           // alert(this.access_token);
           document.removeEventListener('click', this.handleSignInGoogle);
          
