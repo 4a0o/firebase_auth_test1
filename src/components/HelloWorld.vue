@@ -72,7 +72,7 @@ export default {
           this.user = result.user.displayName;
           // this.access_token=result.user.accessToken;
           this.isSignedIn = true;
-          this.oauthIdToken = result.user.oauthIdToken;
+          this.oauthIdToken = result._tokenResponse.oauthIdToken;
           // this.refreshToken = result.user.refreshToken;
           // alert(this.access_token);
           document.removeEventListener('click', this.handleSignInGoogle);
