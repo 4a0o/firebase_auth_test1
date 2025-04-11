@@ -3,9 +3,6 @@
   <HelloWorld msg="Vue3 Social Login App Practice"/>
 </template>
 
-<script src="https://cdn.jsdelivr.net/npm/fingerprintjs2@2.1.4/dist/fingerprint2.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/ua-parser-js@0.7.20/src/ua-parser.min.js"></script>
-
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 
