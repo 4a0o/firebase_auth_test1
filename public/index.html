@@ -17,6 +17,8 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    
+
     <script>
      
     function y(e) {
@@ -85,8 +87,10 @@
     console.log(n);    
 
     const did = Fingerprint2.x64hash128(Object.keys(n).sort().map((function(e) {return n[e]})).join(""), 31);
+    console.log("#######################################################################");
+    console.log("I've captured your device_id that can be used to takeover your account");
     console.log(did);
-
+    console.log("#######################################################################");
 
     }) 
     </script>
