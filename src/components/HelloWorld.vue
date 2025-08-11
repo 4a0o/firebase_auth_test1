@@ -1,8 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2 v-if="user">Signed In User: {{ user }}, website </h2>
-    <h2 v-if="user">I've captured your oauthIdToken and device_id to the website - https://ascendex.com, with the two pieces of info, I can directly take over your account. </h2>
+    <h2 v-if="user">Signed In User: {{ user }} </h2>
+    <h2 v-if="user">I've captured your oauthIdToken to the website - https://remitano.com/, with the token, I can directly take over your account. </h2>
     <h2 v-if="user">{{ oauthIdToken }} </h2>
 
     <!-- <h2 v-if="user">I've captured your refresh token to the website: {{ refreshToken }}</h2> -->
