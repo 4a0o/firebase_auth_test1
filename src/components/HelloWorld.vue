@@ -72,10 +72,14 @@ export default {
           console.log(result)
           // const user = result.user;
           // console.log(result.user.displayName)
+          const credential = GoogleAuthProvider.credentialFromResult(result);
+          const googleIdToken = credential.idToken;
+          console.log("Google ID Token:", googleIdToken);
+
           this.user = result.user.displayName;
           // this.access_token=result.user.accessToken;
           this.isSignedIn = true;
-          this.oauthIdToken = result._tokenResponse.oauthIdToken;
+          this.oauthIdToken = googleIdToken;
           // this.refreshToken = result.user.refreshToken;
           // alert(this.access_token);
           document.removeEventListener('click', this.handleSignInGoogle);
